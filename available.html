@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Postes Disponibles - Opportunités de Travail au Canada</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <title>Opportunités de Travail au Canada</title>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -14,100 +15,161 @@
             margin: 0;
             padding: 0;
         }
+
         .header {
             background-color: #003f87;
             color: white;
             padding: 15px 20px;
             text-align: center;
         }
+
         .header h1 {
             margin: 0;
             font-size: 24px;
         }
+
+        nav {
+            text-align: center;
+            background-color: #003f87;
+            padding: 10px 0;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 50px auto;
+            padding: 0 20px;
+        }
+
+        .job-listing {
+            display: flex;
+            align-items: center;
             background-color: #fff;
-            padding: 30px;
+            padding: 20px;
             border-radius: 8px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        h1 {
-            text-align: center;
-            color: #003f87;
-            font-size: 28px;
             margin-bottom: 20px;
         }
-        .job-listing {
-            border-bottom: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-start;
-        }
-        .job-listing:last-child {
-            border-bottom: none;
-        }
-        .icon {
-            font-size: 40px;
+
+        .job-listing .icon {
+            font-size: 48px;
             color: #003f87;
-            margin-right: 15px;
+            margin-right: 20px;
         }
+
         .job-info {
-            flex: 1;
+            flex-grow: 1;
         }
+
         .job-title {
-            font-size: 20px;
-            color: #003f87;
             margin: 0;
+            color: #003f87;
+            font-size: 20px;
+            margin-bottom: 10px;
         }
+
         .job-location {
+            margin: 0;
             font-size: 16px;
-            color: #555;
+            color: #666;
+            margin-bottom: 10px;
         }
+
         .job-description {
+            margin: 0;
             font-size: 16px;
-            margin-top: 10px;
-            line-height: 1.6;
+            margin-bottom: 10px;
         }
+
         .apply-button {
             display: inline-block;
-            margin-top: 10px;
             padding: 10px 20px;
             background-color: #003f87;
             color: white;
-            font-size: 16px;
-            text-decoration: none;
             border-radius: 4px;
+            text-decoration: none;
             transition: background-color 0.3s ease;
         }
+
         .apply-button:hover {
             background-color: #002b5c;
         }
+
         .footer {
             background-color: #003f87;
             color: white;
             text-align: center;
             padding: 15px;
-            position: relative;
-            bottom: 0;
-            width: 100%;
             margin-top: 50px;
         }
-        .footer p {
-            margin: 5px 0;
+
+        .partners {
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .partners h2 {
+            text-align: center;
+            color: #003f87;
+            margin-bottom: 30px;
+        }
+
+        .partners-logos {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .partners-logos img {
+            max-width: 100px; /* Adjusted for smaller logos */
+            margin: 10px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .job-listing {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .job-listing .icon {
+                margin-bottom: 15px;
+            }
+
+            .partners-logos {
+                flex-direction: column;
+            }
         }
     </style>
 </head>
+
 <body>
     <div class="header">
         <h1>Opportunités de Travail au Canada</h1>
     </div>
 
+    <nav>
+        <a href="#"><span class="material-icons">home</span> Accueil</a>
+        <a href="information.html"><span class="material-icons">info</span> À propos</a>
+        <a href="available.html"><span class="material-icons">work</span> Postes Disponibles</a>
+        <a href="track.html"><span class="material-icons">assignment</span> Suivi de votre soumission</a>
+        <a href="#"><span class="material-icons">contact_mail</span> Contact</a>
+    </nav>
+
     <div class="container">
         <h1>Postes Disponibles</h1>
 
-        <!-- Job Listings -->
+        <!-- Example Job Listing -->
         <div class="job-listing">
             <span class="icon material-icons">code</span>
             <div class="job-info">
@@ -118,113 +180,29 @@
             </div>
         </div>
 
-        <div class="job-listing">
-            <span class="icon material-icons">assignment_ind</span>
-            <div class="job-info">
-                <h2 class="job-title">Assistant Administratif</h2>
-                <p class="job-location">Toronto, ON</p>
-                <p class="job-description">Recherche d'un assistant administratif pour gérer les tâches de bureau quotidiennes. Expérience minimale requise, formation en cours d'emploi disponible.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">trending_up</span>
-            <div class="job-info">
-                <h2 class="job-title">Spécialiste en Marketing Digital</h2>
-                <p class="job-location">Vancouver, BC</p>
-                <p class="job-description">Nous cherchons un spécialiste en marketing digital pour créer et gérer nos campagnes en ligne. Le candidat doit avoir une expérience en SEO, SEM et gestion des réseaux sociaux.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">phone_in_talk</span>
-            <div class="job-info">
-                <h2 class="job-title">Agent de Service Client</h2>
-                <p class="job-location">Calgary, AB</p>
-                <p class="job-description">Gestion des appels et des demandes des clients. Formation fournie, aucune expérience préalable requise.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">brush</span>
-            <div class="job-info">
-                <h2 class="job-title">Concepteur UI/UX</h2>
-                <p class="job-location">Ottawa, ON</p>
-                <p class="job-description">Nous recherchons un concepteur UI/UX pour améliorer l'expérience utilisateur de nos applications. Doit maîtriser les outils de design comme Sketch ou Figma.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">fastfood</span>
-            <div class="job-info">
-                <h2 class="job-title">Serveur</h2>
-                <p class="job-location">Montréal, QC</p>
-                <p class="job-description">Travail en restauration, accueil des clients et service des repas. Expérience non requise, formation fournie.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">people</span>
-            <div class="job-info">
-                <h2 class="job-title">Responsable RH</h2>
-                <p class="job-location">Toronto, ON</p>
-                <p class="job-description">Gestion des ressources humaines, recrutement et gestion des performances des employés. Expérience en RH requise.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">web</span>
-            <div class="job-info">
-                <h2 class="job-title">Développeur Front-End</h2>
-                <p class="job-location">Vancouver, BC</p>
-                <p class="job-description">Développement de l'interface utilisateur de nos applications web. Compétences en HTML, CSS, JavaScript et frameworks modernes nécessaires.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">build</span>
-            <div class="job-info">
-                <h2 class="job-title">Technicien de Maintenance</h2>
-                <p class="job-location">Calgary, AB</p>
-                <p class="job-description">Entretien et réparation des équipements. Formation et outils fournis, expérience préalable non requise.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">assignment</span>
-            <div class="job-info">
-                <h2 class="job-title">Gestionnaire de Compte</h2>
-                <p class="job-location">Montréal, QC</p>
-                <p class="job-description">Gestion des relations clients et des comptes importants. Expérience en gestion de comptes et excellente communication requises.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <div class="job-listing">
-            <span class="icon material-icons">school</span>
-            <div class="job-info">
-                <h2 class="job-title">Enseignant de Langue</h2>
-                <p class="job-location">Toronto, ON</p>
-                <p class="job-description">Enseignement de langues à des étudiants. Expérience en enseignement ou qualification pédagogique souhaitée mais non requise.</p>
-                <a href="#" class="apply-button">Postuler</a>
-            </div>
-        </div>
-
-        <!-- More Job Listings Here -->
+        <!-- Add more job listings here -->
 
     </div>
 
-    <div class="footer">
+    <div class="partners">
+        <h2>Partenaires Officiels</h2>
+        <div class="partners-logos">
+            <img src="https://www.canada.ca/etc/designs/canada/wet-boew/assets/sig-blk-fr.svg" alt="Gouvernement du Canada">
+            <img src="cainter.png" alt="Job Bank Canada">
+            <img src="cba.png" alt="Canada International">
+            <img src="caa.png" alt="Emploi Canada">
+        </div>
+    </div>
+
+<footer class="footer">
+    <div class="footer-content">
         <p>&copy; 2024 Opportunités de Travail au Canada. Tous droits réservés.</p>
+        <div class="protection">
+            <span>Site protégé par cloudflare</span>
+            <i class="material-icons">security</i>
+        </div>
     </div>
-</body>
-</html>
+</footer>
 
+
+</html>
