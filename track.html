@@ -34,6 +34,27 @@
             font-size: 36px;
             margin-right: 10px;
         }
+        nav {
+            background-color: #003f87;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav a {
+            color: white;
+            font-size: 16px;
+            margin: 0 15px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        nav .material-icons {
+            margin-right: 5px;
+            font-size: 20px;
+        }
         .container {
             max-width: 600px;
             margin: 50px auto;
@@ -116,6 +137,14 @@
     <div class="header">
         <h1><i class="material-icons">check_circle_outline</i> Opportunités de Travail au Canada</h1>
     </div>
+
+    <nav>
+        <a href="#"><span class="material-icons">home</span> Accueil</a>
+        <a href="information.html"><span class="material-icons">info</span> À propos</a>
+        <a href="available.html"><span class="material-icons">work</span> Postes Disponibles</a>
+        <a href="track.html"><span class="material-icons">assignment</span> Suivi de votre soumission</a>
+        <a href="#"><span class="material-icons">contact_mail</span> Contact</a>
+    </nav>
 
     <div class="container">
         <h1>Entrez le code que vous avez reçu par SMS et par e-mail</h1>
